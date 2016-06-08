@@ -10,7 +10,7 @@ Vagrant.require_version ">= 1.6.0"
 
 CLUSTER_IP="10.3.0.1"
 NODE_IP = "172.17.4.99"
-NODE_MEMORY_SIZE = 2048
+NODE_MEMORY_SIZE = 6144
 USER_DATA_PATH = File.expand_path("user-data")
 SSL_TARBALL_PATH = File.expand_path("ssl/controller.tar")
 
@@ -37,7 +37,7 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.provider :virtualbox do |v|
-    v.cpus = 1
+    v.cpus = 2
     v.gui = false
     v.memory = NODE_MEMORY_SIZE
 
